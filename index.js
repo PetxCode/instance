@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(80, () => {
   dbConfig();
 });
