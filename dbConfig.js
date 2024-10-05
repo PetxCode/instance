@@ -1,7 +1,7 @@
 const { connect } = require("mongoose");
 const URL = "mongodb://127.0.0.1:27017/dribbbleDB";
 
-export const dbConfig = async () => {
+const dbConfig = async () => {
   try {
     await connect(URL).then(() => {
       console.clear();
@@ -11,3 +11,5 @@ export const dbConfig = async () => {
     return error;
   }
 };
+
+module.exports = dbConfig;
